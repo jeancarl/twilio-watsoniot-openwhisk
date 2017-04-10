@@ -1,0 +1,9 @@
+{
+  "name": "twilio-watsoniot-openwhisk",
+  "version": "0.1.0",
+  "description": "OpenWhisk Action that relays text messages to a Watson IoT device.",
+  "main": "twilio.js",
+  "dependencies": {
+    "ibmiotf": "^0.2.32"
+  }
+}
