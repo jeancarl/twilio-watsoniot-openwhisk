@@ -100,7 +100,7 @@ Click on the OpenWhisk action labeled `twilio`. Click on **Additional Details** 
 
 ![](assets/apiendpoint.png)
 
-Copy this URL into the **Messaging webhook** for the Twilio phone number in the Twilio console.
+Copy this URL into the **Messaging webhook** for the Twilio phone number in the Twilio console, **removing the .json extension**. This will return a TwiML response to the Twilio service.
 
 ![](assets/twilio.png)
 
