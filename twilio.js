@@ -9,19 +9,19 @@
   *
   * @param deviceType type of the IoT device (default twilio)
   * @param deviceId ID of the IoT device (default 10-digit phone number from the To parameter)
-  * @param eventType command to the IoT device (default sms)
+  * @param eventType command/event to the IoT device (default sms)
   * @param sendAs if present, will send this message as a device command insead of an event (default event, set to true to send as command).
   * @param To phone number from Twilio where the message was received
   * @param Body content of the text message
   *
-  * @return either the Twiml response, or JSON of the analyze message.
+  * @return either the Twiml response, or JSON of the analyzed message.
   *
   */
 'use strict';
 
 function main(params) {
   const deviceType = params.deviceType || "twilio";
-  const deviceId = params.deviceId || params.To.replace(/[^a-zA-Z0-9\-_\.]/g, "");
+  const deviceId = params.deviceId || params.To.replace(/[^0-9]/g, "");
   const eventType = params.eventType || "sms";
   const sendAs = params.sendAs && params.sendAs.toLowerCase() == "command" ? "Command" : "Event"; // Determines if this is a device event or command.
 
